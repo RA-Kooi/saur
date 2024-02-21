@@ -142,6 +142,7 @@ _feature_patches=(
 	"1014-Additional-support-in-ACPI-builder-to-support-SLIC-a.patch"
 	"1016-gnttab-disable-grant-tables-v2-by-default.patch"
 	"1017-Disable-TSX-by-default.patch"
+	"1018-Fix-IGD-passthrough-with-linux-stubdomain.patch"
 )
 
 
@@ -215,6 +216,7 @@ _feature_patch_sums=(
 	"e0097e803f8a5fb249a86af38f888dd1860e8a15317b1bbab198af56efa1423735e9cd91a1931fbbcf07e73ffd3ddecd8f4286f05be150d439e5d7e9812a48bd" # 1014-Additional-support-in-ACPI-builder-to-support-SLIC-a.patch
 	"7f058161143baf5aa402f86d78b4199df3455c70b952b8691c05a920181e3bf35df3d614109b2916fb9a5e4e437507c7570f50c417bf3086727d405f323b5ced" # 1016-gnttab-disable-grant-tables-v2-by-default.patch
 	"46894987106b9646d3a417a4d2168f6b44ecb56d0d39d1f9384623dc03bee846c3f93b76bd5e61602f7969e403ba59b39353bb7166e40d37f9964355cbd6b5a1" # 1017-Disable-TSX-by-default.patch
+	"54448175b503ebbcbeb0dac3b13f4e5e1848caee29040fb449049fa0e1c4efe935a1b1fba976fd5026b2ea1e39f46c335064e601fa370f86441b6dc84f01e0f5" # 1018-Fix-IGD-passthrough-with-linux-stubdomain.patch
 )
 
 
