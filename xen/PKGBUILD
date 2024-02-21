@@ -161,6 +161,7 @@ _feature_patches=(
 	"0007-x86-hpet-Post-cleanup.patch"
 	"0008-libxc-retry-shadow-ops-if-EBUSY-is-returned.patch"
 	"0009-xen-gnttab-Avoid-TLB-flush-if-grant-mapped-page-was-.patch"
+	"0010-efi-Workaround-page-fault-during-runtime-service.patch"
 )
 
 
@@ -253,6 +254,7 @@ _feature_patch_sums=(
 	"e08f26d85119098b31d72e8c56e3687819201d6e88ab873115743514da936fc0b6c8f9a7e7876c712d9035c2c04ac9307c3f6820e582878e3a084a49b5c75b41" # 0007-x86-hpet-Post-cleanup.patch
 	"ae1a7c9357e77b871040755e55d5ec016c17bf917f7c637a27a944273f58b3ce577934c7c1532874c9515c8456cac4d983f8cb8363524b6b11fbf511593bc780" # 0008-libxc-retry-shadow-ops-if-EBUSY-is-returned.patch
 	"ca1a12ad77d6ec98c44c1bc38bfbfa0e183b1c3ca36ebbd06d1e8eeafa280e3d312d6172e80eff273cb85ceeab19c904d8227741748759a3b04261cf8a027ff0" # 0009-xen-gnttab-Avoid-TLB-flush-if-grant-mapped-page-was-.patch
+	"b1ad0fe54dbb7de49348059a81f3c247b66ed29afbd547d4a73f5fc2714a0fd42c6eb64f7c4740ecd7ac81dd44bbd5f6d59465d7b6f366f1527bcf7673defbb8" # 0010-efi-Workaround-page-fault-during-runtime-service.patch
 )
 
 
