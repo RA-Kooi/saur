@@ -139,6 +139,7 @@ _feature_patches=(
 	"1008-libxl-Force-emulating-readonly-disks-as-SCSI.patch"
 	"1009-tools-xenconsole-replace-ESC-char-on-xenconsole-outp.patch"
 	"1010-tools-xenconsole-Don-t-replace-ESC-char-by-default.patch"
+	"1014-Additional-support-in-ACPI-builder-to-support-SLIC-a.patch"
 )
 
 
@@ -209,6 +210,7 @@ _feature_patch_sums=(
 	"819b8d3e756d09625261a5ff46c9b7d4003127b4403268a61d2e66238015e3eb33b8adcc67e7e4943933fdb54cecd21d7527900b398b61d5939e4daee4bd70bb" # 1008-libxl-Force-emulating-readonly-disks-as-SCSI.patch
 	"983658d2a11de892b84c7d2600fb4b5971d92f054fcef0043e01e5bdeb32c4b57667ddf5b3fa59a29e863b90b71d93f876e3e7a69ad089157b04bdebf09b9482" # 1009-tools-xenconsole-replace-ESC-char-on-xenconsole-outp.patch
 	"79e0d8690370f7d455d891694b86fc90078bf1ceecec11fa68563ac9ccaa68b44377139d8442ddccbf29e5eaa6bc241d8583dc190529b807d32c78987966b3b0" # 1010-tools-xenconsole-Don-t-replace-ESC-char-by-default.patch
+	"e0097e803f8a5fb249a86af38f888dd1860e8a15317b1bbab198af56efa1423735e9cd91a1931fbbcf07e73ffd3ddecd8f4286f05be150d439e5d7e9812a48bd" # 1014-Additional-support-in-ACPI-builder-to-support-SLIC-a.patch
 )
 
 
