@@ -135,6 +135,7 @@ _feature_patches=(
 	"1001-hotplug-store-block-params-for-cleanup.patch"
 	"1002-libxl-do-not-start-dom0-qemu-when-not-needed.patch"
 	"1006-libxl-use-EHCI-for-providing-tablet-USB-device.patch"
+	"1007-libxl-allow-kernel-cmdline-without-kernel-if-stubdom.patch"
 )
 
 
@@ -201,6 +202,7 @@ _feature_patch_sums=(
 	"7ca8f34d4f37f3ea4b6e69eebba219fd055b42c7964299f54841b1228aa20c0a8ff2b6ba8446801339a9855afa347f0c13cbc50b325135512d775547f14f2def" # 1001-hotplug-store-block-params-for-cleanup.patch
 	"370d44cbc801d0e814dbd4413ea2e42424a880b5084f9876937b281eb73f6eb46a4807ea765d30d539b7ec41e3eda5fb18aa7f8ca506c32c18c359a91fd80fcf" # 1002-libxl-do-not-start-dom0-qemu-when-not-needed.patch
 	"bbed2c6f3bd333cf9f65cb52315740ce27a31eb45356c49485f44650b9d3f84d45ca1465e813ffe9b3ba5cbdb8e3598da7304a139fb2490db19d2f95e96fc000" # 1006-libxl-use-EHCI-for-providing-tablet-USB-device.patch
+	"02bc6a2feee14cdb40e91a7052f1c87f34b79c442ef483c44d04e5470127cfb47e0069e79aa1c0d063110fe2b568040d3fbc38ccb8fbfeacfe7b7ab7fa53a12a" # 1007-libxl-allow-kernel-cmdline-without-kernel-if-stubdom.patch
 )
 
 
