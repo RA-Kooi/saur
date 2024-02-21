@@ -134,6 +134,7 @@ _feature_patches=(
 	"0652-x86-hvm-Allow-writes-to-registers-on-the-same-page-a.patch"
 	"1001-hotplug-store-block-params-for-cleanup.patch"
 	"1002-libxl-do-not-start-dom0-qemu-when-not-needed.patch"
+	"1006-libxl-use-EHCI-for-providing-tablet-USB-device.patch"
 )
 
 
@@ -199,6 +200,7 @@ _feature_patch_sums=(
 	"7af1939e38d42bc52eb03a5c12143e25bf04949821b30a2a6f098c9d4c2e5c04d621418abe275a0cc38bb92ebd3f6671641f271f4c7130fdb45aec09b732c566" # 0652-x86-hvm-Allow-writes-to-registers-on-the-same-page-a.patch
 	"7ca8f34d4f37f3ea4b6e69eebba219fd055b42c7964299f54841b1228aa20c0a8ff2b6ba8446801339a9855afa347f0c13cbc50b325135512d775547f14f2def" # 1001-hotplug-store-block-params-for-cleanup.patch
 	"370d44cbc801d0e814dbd4413ea2e42424a880b5084f9876937b281eb73f6eb46a4807ea765d30d539b7ec41e3eda5fb18aa7f8ca506c32c18c359a91fd80fcf" # 1002-libxl-do-not-start-dom0-qemu-when-not-needed.patch
+	"bbed2c6f3bd333cf9f65cb52315740ce27a31eb45356c49485f44650b9d3f84d45ca1465e813ffe9b3ba5cbdb8e3598da7304a139fb2490db19d2f95e96fc000" # 1006-libxl-use-EHCI-for-providing-tablet-USB-device.patch
 )
 
 
