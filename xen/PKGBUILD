@@ -159,6 +159,7 @@ _feature_patches=(
 	"0005-x86-hpet-Pre-cleanup.patch"
 	"0006-x86-hpet-Use-singe-apic-vector-rather-than-irq_descs.patch"
 	"0007-x86-hpet-Post-cleanup.patch"
+	"0008-libxc-retry-shadow-ops-if-EBUSY-is-returned.patch"
 )
 
 
@@ -249,6 +250,7 @@ _feature_patch_sums=(
 	"c0077adf3a786e9c1fa1fefb935f053ac58c5a86a63b332cc0c38c5b85491ad8ae803f41cd06c95ec5bc5931270340b180461d7e6952aa643345d70c09da0b9f" # 0005-x86-hpet-Pre-cleanup.patch
 	"7aaed307c99642697f335d18b9577a5254467e3a318e112b6d4d1b96b533d6cc011531105288cb771cc7061fba3c41e4154b92a4a88b4766ec353c79c450e5a8" # 0006-x86-hpet-Use-singe-apic-vector-rather-than-irq_descs.patch
 	"e08f26d85119098b31d72e8c56e3687819201d6e88ab873115743514da936fc0b6c8f9a7e7876c712d9035c2c04ac9307c3f6820e582878e3a084a49b5c75b41" # 0007-x86-hpet-Post-cleanup.patch
+	"ae1a7c9357e77b871040755e55d5ec016c17bf917f7c637a27a944273f58b3ce577934c7c1532874c9515c8456cac4d983f8cb8363524b6b11fbf511593bc780" # 0008-libxc-retry-shadow-ops-if-EBUSY-is-returned.patch
 )
 
 
