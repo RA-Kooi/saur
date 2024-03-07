@@ -4,27 +4,28 @@ _srcname=qemu
 pkgver=8.2.1
 pkgrel=1
 pkgdesc="A xen-specific QEMU, built to qemu-builtin standards"
-arch=("x86_64")
+arch=(x86_64)
 url="https://www.qemu.org"
 license=(GPL2 LGPL2.1)
-depends=(curl xen numactl)  # lot of deps are apparently covered by xen
-makedepends=(ninja meson)
-provides=(qemu-xen xen-qemu xen-qemu-builtin)
-conflicts=(xen-qemu-builtin)
-replaces=(xen-qemu-builtin)
+
+depends=('curl' 'xen' 'numactl')  # lot of deps are apparently covered by xen
+makedepends=('ninja' 'meson')
+
+provides=('qemu-xen' 'xen-qemu' 'xen-qemu-builtin')
+conflicts=('xen-qemu-builtin')
+replaces=('xen-qemu-builtin')
+
 source=(
 	https://download.qemu.org/qemu-${pkgver}.tar.xz{,.sig}
 )
-sha512sums=('e72d3e13339c03e8d371ca060ac700c45af2ca37523cddb6b02dcaf8430d75c8cef194cf496df9816440b281f368457def1126677db757928805d93ceca2f9af'
-            'SKIP')
 
-
+sha512sums=(
+	'e72d3e13339c03e8d371ca060ac700c45af2ca37523cddb6b02dcaf8430d75c8cef194cf496df9816440b281f368457def1126677db757928805d93ceca2f9af'
+	'SKIP')
 
 validpgpkeys=('CEACC9E15534EBABB82D3FA03353C9CEF108B584') # Michael Roth <flukshun@gmail.com>
 
-
 build() {
-
 	cd $srcdir
 	mkdir build
 	cd build
@@ -45,18 +46,13 @@ build() {
 		--mandir=/usr/lib/xen/share/man \
 		--libexecdir=/usr/lib/xen/libexec \
 		--firmwarepath=/usr/lib/xen/share/qemu-firmware \
+		--python=python3 \
+		--cpu=x86_64 \
 		--disable-kvm \
 		--disable-docs \
-		--disable-guest-agent \
-		--python=python3 \
-		--cpu=x86_64 
+		--disable-guest-agent
 
 	ninja
-
-		
-
-
-
 }
 
 package() {
