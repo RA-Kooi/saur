@@ -2,6 +2,7 @@
 */pkg
 */tmp
 */*.tar.xz
+*/*.tar.xz.sig
 */*.tar.gz
 */*.tar.zst
 *.backup
