@@ -381,7 +381,7 @@ build() {
 		--enable-ovmf \
 		--disable-qemu-traditional \
 		${_config_stubdom} \
-		--with-system-qemu=/usr/lib/xen/bin/qemu-system-i386 \
+		--with-system-qemu=/usr/bin/qemu-system-i386-xen `# Do we want the x86_64 version?` \
 		--with-sysconfig-leaf-dir=conf.d \
 		--with-system-seabios=/usr/share/qemu/bios-256k.bin \
 		--disable-ocamltools
