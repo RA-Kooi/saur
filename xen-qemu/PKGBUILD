@@ -8,8 +8,75 @@ arch=(x86_64)
 url="https://www.qemu.org"
 license=(GPL2 LGPL2.1)
 
-depends=('curl' 'xen' 'numactl')  # lot of deps are apparently covered by xen
-makedepends=('ninja' 'meson')
+depends=(
+	'curl'
+	'xen'
+	'numactl'
+	'dtc'
+	'fuse3'
+	'gcc-libs'
+	'glibc'
+	'glib2' 'libgio-2.0.so' 'libglib-2.0.so' 'libgmodule-2.0.so'
+	'gnutls'
+	'keyutils'
+	'libaio'
+	'libelf'
+	'libbpf' 'libbpf.so'
+	'libjpeg-turbo' 'libjpeg.so'
+	'libpng'
+	'libsasl'
+	'libseccomp' 'libseccomp.so'
+	'libslirp' 'libslirp.so'
+	'liburing' 'liburing.so'
+	'libxdp' 'libxdp.so'
+	'lzo'
+	'ndctl'
+	'numactl' 'libnuma.so'
+	'pam' 'libpam.so'
+	'pixman' 'libpixman-1.so'
+	'qemu-common='$pkgver'-'$pkgrel
+	'snappy'
+	'vde2'
+	'zlib'
+	'zstd' 'libzstd.so'
+)
+
+makedepends=(
+	'ninja'
+	'brltty'
+	'bzip2'
+	'dtc'
+	'fuse3'
+	'gcc-libs'
+	'glib2'
+	'gnutls'
+	'keyutils'
+	'libaio'
+	'libbpf'
+	'libcap-ng'
+	'libpng'
+	'libsasl'
+	'libseccomp'
+	'libslirp'
+	'liburing'
+	'libxdp'
+	'libxml2'
+	'libxkbcommon'
+	'lzo'
+	'meson'
+	'ndctl'
+	'numactl'
+	'pam'
+	'pcre2'
+	'python'
+	'python-distlib'
+	'python-setuptools'
+	'python-pip'
+	'snappy'
+	'vde2'
+	'zlib'
+	'zstd'
+)
 
 provides=('qemu-xen' 'xen-qemu' 'xen-qemu-builtin')
 conflicts=('xen-qemu-builtin')
@@ -32,25 +99,77 @@ build() {
 
 	"${srcdir}/${_srcname}-${pkgver}/configure" \
 		--enable-xen \
-		--target-list=i386-softmmu \
+		--target-list=i386-softmmu,x86_64-softmmu \
 		--enable-trace-backends=log \
 		--prefix=/usr \
-		--libdir=/usr/lib/xen/lib \
-		--includedir=/usr/lib/xen/include \
 		--extra-cflags="-DXC_WANT_COMPAT_EVTCHN_API=1  -DXC_WANT_COMPAT_GNTTAB_API=1 -DXC_WANT_COMPAT_MAP_FOREIGN_API=1 -DXC_WANT_COMPAT_DEVICEMODEL_API=1" \
-		--extra-ldflags=-Wl,-rpath,/usr/lib/xen/lib \
-		--bindir=/usr/lib/xen/bin \
-		--datadir=/usr/share/qemu-xen \
 		--localstatedir=/var \
-		--docdir=/usr/lib/xen/share/doc \
-		--mandir=/usr/lib/xen/share/man \
-		--libexecdir=/usr/lib/xen/libexec \
-		--firmwarepath=/usr/lib/xen/share/qemu-firmware \
+		--libexecdir=/usr/lib/qemu \
+		--smbd=/usr/bin/smbd \
+		--with-coroutine=ucontext \
 		--python=python3 \
 		--cpu=x86_64 \
-		--disable-kvm \
+		--enable-af-xdp \
+		--enable-auth-pam \
+		--enable-bpf \
+		--enable-bzip2 \
+		--enable-cap-ng \
+		--enable-crypto-afalg \
+		--enable-fuse\
+		--enable-gio \
+		--enable-gnutls \
+		--enable-libdaxctl \
+		--enable-libdw \
+		--enable-libkeyutils \
+		--enable-libudev \
+		--enable-linux-aio \
+		--enable-linux-io-uring \
+		--enable-lzo \
+		--enable-modules \
+		--enable-nettle \
+		--enable-numa \
+		--enable-pixman \
+		--enable-png \
+		--enable-seccomp \
+		--enable-slirp \
+		--enable-snappy \
+		--enable-vde \
+		--enable-vnc \
+		--enable-vnc-jpeg \
+		--enable-vnc-sasl \
+		--enable-zstd \
+		--disable-alsa \
+		--disable-bsd-user \
+		--disable-capstone \
+		--disable-curl \
+		--disable-curses \
+		--disable-dmg \
 		--disable-docs \
-		--disable-guest-agent
+		--disable-gcrypt \
+		--disable-glusterfs \
+		--disable-gtk \
+		--disable-guest-agent \
+		--disable-install-blobs \
+		--disable-kvm \
+		--disable-libiscsi \
+		--disable-libnfs \
+		--disable-libssh \
+		--disable-libusb \
+		--disable-linux-user \
+		--disable-opengl \
+		--disable-oss \
+		--disable-qcow1 \
+		--disable-qom-cast-debug \
+		--disable-sdl \
+		--disable-tcg \
+		--disable-tools \
+		--disable-tpm \
+		--disable-vhost-crypto \
+		--disable-vhost-kernel \
+		--disable-vhost-net \
+		--disable-vhost-user \
+		--disable-vhost-vdpa \
+		--disable-werror
 
 	ninja
 }
