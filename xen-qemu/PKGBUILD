@@ -180,4 +180,11 @@ package() {
 	# meson direct was failing me, but this worked.
 	# might be a backwards compatible thing
 	make DESTDIR="$pkgdir/" install
+
+	cd "${pkgdir}/usr"
+	rm -r lib share
+
+	cd bin
+	mv qemu-system-i386 qemu-system-i386-xen
+	mv qemu-system-x86_64 qemu-system-x86_64-xen
 }
