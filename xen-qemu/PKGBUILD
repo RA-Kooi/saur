@@ -94,12 +94,14 @@ _patches=(
 	"0005-hw-xen-xen_pt-Save-back-data-only-for-declared-regis.patch"
 	"0006-Do-not-access-dev-mem-in-MSI-X-PCI-passthrough-on-Xe.patch"
 	"0008-xen-round-pci-region-sizes.patch"
+	"0011-Additional-seccomp-filters.patch"
 )
 
 _patch_sums=(
 	"e4f0ac29c7cc9d8e666303265c21834320379fc8617bd37f9f665f1cc88590ba87ab1361c1937e08e50fbdbc4d78b2cd40e988324fc978d964cfd69732fffc5e" #0005-hw-xen-xen_pt-Save-back-data-only-for-declared-regis.patch
 	"fe28601746ab406e23970ec175fa4c657f5551719e74f5793b63fb7a919411afbcf66892018b57084d3d882fc297fd2d29d7fc721d2863f33938544e0f9e0643" #0006-Do-not-access-dev-mem-in-MSI-X-PCI-passthrough-on-Xe.patch
 	"0c69f8edacc5b88de1215e20b99690a59039d5912ca17514059f422901eed87a714e9146ca2c13c785df8e077a6f2b7c24a19b4b60d7e481f8005d5e3120eea2" #0008-xen-round-pci-region-sizes.patch
+	"f77a58b9d34dfb9d16b3ebe82db11791c6bfcebfa8e2caa77684420610ad8faf46499961b4f33a199aae006d9a29152fb0e2517635949e657e36bc784244c0d5" #0011-Additional-seccomp-filters.patch
 )
 
 source=( "${_source[@]}" "${_patches[@]}" )
