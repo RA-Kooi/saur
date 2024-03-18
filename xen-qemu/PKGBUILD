@@ -97,6 +97,7 @@ _patches=(
 	"0011-Additional-seccomp-filters.patch"
 	"0012-Register-ich6-ich9-soundhw.patch"
 	"0013-pc_piix-suppress-vmdesc.patch"
+	"0014-pc_piix-init-fw_cfg.patch"
 )
 
 _patch_sums=(
@@ -106,6 +107,7 @@ _patch_sums=(
 	"f77a58b9d34dfb9d16b3ebe82db11791c6bfcebfa8e2caa77684420610ad8faf46499961b4f33a199aae006d9a29152fb0e2517635949e657e36bc784244c0d5" #0011-Additional-seccomp-filters.patch
 	"74e02525d13f18fe8e8dbb6470794b7e0d133b18230d1d64dbaef93f2074ebda33263d1c5a0ac5752f221918aa143b50bdec3bde0ea24222962d7193e9c180db" #0012-Register-ich6-ich9-soundhw.patch
 	"e669d687299edb549d2afd8532c8cef81016a2a6a9b5efde2e97d614bc371d12fcfe8d5ae3c22e23f4f6218c0528ee07f3010f0a4023295c3ace2a8bfa4f499f" #0013-pc_piix-suppress-vmdesc.patch
+	"a3abbebc74ab59d88ac22e28be5cb4271dda981f91464a76cf6f8f0433377e90ce45335b432d4d93863485f9227b7d4da4d12601cbfe19d6c7c4b7c1f9d47c11" #0014-pc_piix-init-fw_cfg.patch
 )
 
 source=( "${_source[@]}" "${_patches[@]}" )
