@@ -82,19 +82,39 @@ provides=('qemu-xen' 'xen-qemu' 'xen-qemu-builtin')
 conflicts=('xen-qemu-builtin')
 replaces=('xen-qemu-builtin')
 
-source=(
+_source=(
 	https://download.qemu.org/qemu-${pkgver}.tar.xz{,.sig}
 )
 
-sha512sums=(
+_sha512sums=(
 	'e72d3e13339c03e8d371ca060ac700c45af2ca37523cddb6b02dcaf8430d75c8cef194cf496df9816440b281f368457def1126677db757928805d93ceca2f9af'
 	'SKIP')
 
+_patches=(
+)
+
+_patch_sums=(
+)
+
+source=( "${_source[@]}" "${_patches[@]}" )
+sha512sums=( "${_sha512sums[@]}" "${_patch_sums[@]}" )
+noextract+=( "${_patches[@]##*/}" )
+
 validpgpkeys=('CEACC9E15534EBABB82D3FA03353C9CEF108B584') # Michael Roth <flukshun@gmail.com>
+
+prepare() {
+	cd "${_srcname}-${pkgver}"
+
+	for patchurl in "${_patches[@]}"; do
+		patch=$(basename $patchurl)
+		echo "==> Applying patch '${patch}'..."
+		patch -p1 < "../${patch}"
+	done
+}
 
 build() {
 	cd $srcdir
-	mkdir build
+	mkdir -p build
 	cd build
 
 	"${srcdir}/${_srcname}-${pkgver}/configure" \
