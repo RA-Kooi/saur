@@ -1,0 +1,32 @@
+From 3004c508215284cb13028982def86ea8dde37371 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fr=C3=A9d=C3=A9ric=20Pierret=20=28fepitre=29?=
+ <frederic.pierret@qubes-os.org>
+Date: Mon, 1 Nov 2021 18:35:52 +0100
+Subject: [PATCH 13/21] pc_piix: suppress vmdesc
+
+Skip waiting for VMDESC state section, it isn't sent when resuming Xen domain.
+
+Adapted from https://github.com/QubesOS/qubes-vmm-xen-stubdom-linux/blob/2a814bd1edaf549ef9252eb6747aa6137abf9831/qemu/patches/suppress_vmdesc.patch
+
+Author: marmarek
+
+Contributors: fepitre
+---
+ hw/i386/pc_piix.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/hw/i386/pc_piix.c b/hw/i386/pc_piix.c
+index eace854335..6a822a544d 100644
+--- a/hw/i386/pc_piix.c
++++ b/hw/i386/pc_piix.c
+@@ -505,6 +505,7 @@ static void pc_xen_hvm_init(MachineState *machine)
+     pc_xen_hvm_init_pci(machine);
+     xen_igd_reserve_slot(pcms->bus);
+     pci_create_simple(pcms->bus, -1, "xen-platform");
++    machine->suppress_vmdesc = true;
+ }
+ #endif
+ 
+-- 
+2.44.0
+
