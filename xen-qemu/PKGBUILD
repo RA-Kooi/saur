@@ -98,6 +98,7 @@ _patches=(
 	"0012-Register-ich6-ich9-soundhw.patch"
 	"0013-pc_piix-suppress-vmdesc.patch"
 	"0014-pc_piix-init-fw_cfg.patch"
+	"0015-i386-load-kernel-on-xen-using-DMA.patch"
 )
 
 _patch_sums=(
@@ -108,6 +109,7 @@ _patch_sums=(
 	"74e02525d13f18fe8e8dbb6470794b7e0d133b18230d1d64dbaef93f2074ebda33263d1c5a0ac5752f221918aa143b50bdec3bde0ea24222962d7193e9c180db" #0012-Register-ich6-ich9-soundhw.patch
 	"e669d687299edb549d2afd8532c8cef81016a2a6a9b5efde2e97d614bc371d12fcfe8d5ae3c22e23f4f6218c0528ee07f3010f0a4023295c3ace2a8bfa4f499f" #0013-pc_piix-suppress-vmdesc.patch
 	"a3abbebc74ab59d88ac22e28be5cb4271dda981f91464a76cf6f8f0433377e90ce45335b432d4d93863485f9227b7d4da4d12601cbfe19d6c7c4b7c1f9d47c11" #0014-pc_piix-init-fw_cfg.patch
+	"d6b3a2834ab236c02a65525ba5fc82500d7a98481bb6e878eb841eaba0e74aeb11749748ae582b692240023fa50d85ab021790a096e8a7482ebf5393bc0a3d25" #0015-i386-load-kernel-on-xen-using-DMA.patch
 )
 
 source=( "${_source[@]}" "${_patches[@]}" )
